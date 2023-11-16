@@ -1,0 +1,43 @@
+{
+  "name": "buyer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@progress/kendo-react-animation": "^6.1.0",
+    "@types/node": "20.8.8",
+    "@types/react": "18.2.31",
+    "@types/react-dom": "18.2.14",
+    "autoprefixer": "10.4.16",
+    "axios": "^1.6.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "eslint": "8.52.0",
+    "eslint-config-next": "^14.0.2",
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0",
+    "mongoose": "^7.6.3",
+    "next": "^14.0.2",
+    "next-auth": "^4.24.3",
+    "postcss": "8.4.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-multi-carousel": "^2.8.4",
+    "react-responsive-carousel": "^3.2.23",
+    "semantic-ui-react": "^2.1.4",
+    "tailwindcss": "3.3.4",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.5"
+  }
+}

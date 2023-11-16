@@ -1,0 +1,6 @@
+.carousel .control-dots .dot{
+    width: 20px; /* set the width as per your requirement */
+    height: 20px; /* set the height as per your requirement */
+    margin: 0 5px; /* optional: adjust the margin between the dots */
+  } 
+  
