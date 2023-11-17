@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { ChangeEvent, FormEvent } from "react";
+import Image from "next/image";
 
 const Register = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -99,7 +100,7 @@ const Register = () => {
     <div className="flex justify-center h-full text-black">
       <div className="cursor-text">
         <h1 className="text-4xl font-medium w-[400px] ">
-          {isSignUp ? "Create an account" : "Log in to Buyer’s Edge"}
+          {isSignUp ? "Create an account" : "Log in to Buyer`s Edge"}
         </h1>
         <p className="p-2">enter your details below</p>
 
@@ -191,7 +192,7 @@ const Register = () => {
               className={
                 "group relative w-full flex justify-center py-2 rounded-md px-4 border border-gray-500 text-base font-medium  text-black  items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#DB4444]"
               }>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjk6gBYhwVFwlqxFxV4aAQ8nP5Ogtr7En6_xrWv0dnA&s"
                 className="flex gap-1 items-center"
                 width={30}
@@ -227,8 +228,8 @@ const Register = () => {
                   </span>
                 </div>
               ) : (
-                <div className=" ">
-                  Don't have an account ?{" "}
+                <div >
+                  Don`t have an account ?{` `}
                   <span className="text-gray-800 border-b py-1  border-gray-800 font-semibold ">
                     SignUp
                   </span>

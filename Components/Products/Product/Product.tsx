@@ -6,8 +6,26 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BiShow, BiSolidStar } from "react-icons/bi";
 import { FiStar } from "react-icons/fi";
 
-const Product = ({ product }: { product: string }) => {
+interface ProductProps {
+  id?: string;
+  name?: string;
+  title?: string;
+  image?: string;
+  imageurl?: string;
+  price?: string;
+  rating?: {
+    rate: number;
+    count: number;
+  };
+}
 
+const Product: React.FC<ProductProps> = ({
+  
+  image,
+  price,
+  rating,
+  title,
+}) => {
   return (
     <div className="relative h-full    w-[290px] transform transition-transform hover:translate-y-[-5px] hover:shadow-lg  ">
       <div className="bg-gray-200">
@@ -25,34 +43,25 @@ const Product = ({ product }: { product: string }) => {
           </div>
         </div>
         <div className="bg-gray-100 pt-10  flex items-center justify-center">
-          <img
-            src={product?.image || product.imageurl}
-            height={150}
-            width={150}
-          />
+          <img src={image} height={150} width={150} />
         </div>
       </div>
 
       <div className="text-lg font-thin text-black mt px-2 ">
-        <div className=" font-semibold text-base py-2">
-          {product?.title || product.name}
-        </div>
+        <div className=" font-semibold text-base py-2">{title}</div>
         <div className=" pb-2 cursor-text font-normal text-red-600  ">
           {" "}
-          ${product?.price}{" "}
-          <span className=" text-gray-500 line-through">$160</span>{" "}
+          ${price} <span className=" text-gray-500 line-through">$160</span>{" "}
         </div>
         <div className="pb-2 cursor-text font-semibold flex items-center  gap-2 ">
           {" "}
           <div className="flex items-center justify-center text-sm h-5 w-12 border-[#388e3c] bg-[#388e3c] rounded-sm">
-            <span className="text-white    ">{product?.rating?.rate}</span>{" "}
+            <span className="text-white    ">{rating?.rate}</span>{" "}
             <span className="">
               <BiSolidStar className="text-#FFAD33 h-4 w-4" fill="white" />
             </span>
           </div>
-          <span className="text-gray-400 text-sm">
-            ({product?.rating?.count})
-          </span>
+          <span className="text-gray-400 text-sm">({rating?.count})</span>
         </div>
       </div>
     </div>

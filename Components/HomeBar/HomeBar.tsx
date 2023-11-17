@@ -20,12 +20,12 @@ const HomeBar = () => {
     <div className=" overflow-hidden">
       <div className="flex items-center flex-row text-black px-[135px] w-full h-fit">
         <div className="flex flex-col gap-4 mt-4 w-1/6">
-          <div>Women's Fashion</div>
-          <div>Men's Fashion</div>
+          <div>Women`s Fashion</div>
+          <div>Men`s Fashion</div>
           <div>Electronics</div>
           <div>Home & Lifestyle</div>
           <div>Medicine</div>
-          <div>Baby's & Toy</div>
+          <div>Baby`s & Toy</div>
           <div>Groceries & Pets</div>
           <div>Health & Beauty</div>
         </div>

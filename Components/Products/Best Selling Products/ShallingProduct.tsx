@@ -11,11 +11,14 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Example: You 
 import { FiChevronLeft } from "react-icons/fi";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { BiChevronRight } from "react-icons/bi";
+import { Product as ProductProps } from "@/type";
 
 const SallingProduct = () => {
   const { products } = useProducts();
 
-  const product = products?.map((item: any) => <Product product={item} />);
+  const product = products?.map((item: ProductProps, index: any) => (
+    <Product key={index} {...item} />
+  ));
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
     const {
       carouselState: { currentSlide },

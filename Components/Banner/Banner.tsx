@@ -36,6 +36,7 @@ const Banner = () => {
           renderIndicator={(onClickHandler, isSelected, index, label) => {
             const defStyle = {
               backgroundColor: "gray",
+              // boxSizing:"border-box",
               cursor: "pointer",
               borderRadius: "50%",
               display: "flex",
@@ -46,7 +47,7 @@ const Banner = () => {
             const style = isSelected
               ? {
                   backgroundColor: "red",
-                  boxSizing: "border-box",
+                  // boxSizing: "border-box",
                   borderRadius: "50%",
                   border: "2px solid white",
                   height: "1rem",
@@ -59,7 +60,7 @@ const Banner = () => {
                 style={style}
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
-                value={index}
+                // value={index}
                 key={index}
                 role="button"
                 tabIndex={0}

@@ -3,12 +3,15 @@ import React from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Product from "../Product/Product";
 import useProducts from "@/actions/useProducts";
+import { Product  as ProductProps} from "@/type";
+
+
 
 const BestProduct = () => {
-  const { products, error } = useProducts();
+  const { products } = useProducts();
 
 
-  const product = products?.map((item: any) => <Product product={item} />);
+  const product = products?.map((item:ProductProps,index) => <Product key={index} {...item} />);
   return (
     <div className="px-[135px] py-10">
       <div className="flex items-center gap-2 ">
@@ -30,7 +33,7 @@ const BestProduct = () => {
           products?.length &&
           products
             .slice(0,8)
-            .map((product) => <Product key={product?.id} product={product} />)}
+            .map((product:ProductProps,index) => <Product key={index} {...product} />)}
       </div>
     </div>
   );

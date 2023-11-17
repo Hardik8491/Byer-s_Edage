@@ -1,10 +1,23 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import Times from "../Timex/Times";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Product from "../Products/Product/Product";
 
 import useProducts from "@/actions/useProducts";
+interface ProductListProps {
+  id?: string;
+  name?: string;
+  title?: string;
+  image?: string;
+  imageurl?: string;
+  price?: string;
+  rating?: {
+    rate: number;
+    count: number;
+  };
+}
 
 const ProductList = async () => {
   const { products } = useProducts();
@@ -23,7 +36,7 @@ const ProductList = async () => {
     <div className="px-[135px] py-10 ">
       <div className="flex items-center gap-2 ">
         <div className="bg-[#DB4444] border-2 h-12 w-5 rounded-md border-[#DB4444] " />
-        <p className="text-[#DB4444] font-semibold text-base">Today's</p>
+        <p className="text-[#DB4444] font-semibold text-base">Today`s</p>
       </div>
 
       <div className="flex justify-between py-4 ">
@@ -42,12 +55,21 @@ const ProductList = async () => {
           </div>
         </div>
       </div>
+
       <div className=" grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4  mt-2 mx-auto">
         {products &&
           products?.length &&
           products
             .slice(0, index)
-            .map((product) => <Product key={product?.id} product={product} />)}
+            .map((product: ProductListProps, index) => (
+              <Product
+                key={index}
+                image={product?.image}
+                title={product?.title}
+                price={product?.price}
+                rating={product.rating}
+              />
+            ))}
       </div>
       <div className="cursor-pointer ring-offset-0 w-full flex justify-center mt-10 items-center">
         {index <= 20 ? (
