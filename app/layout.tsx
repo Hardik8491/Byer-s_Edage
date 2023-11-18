@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import Header from "@/Components/Header/Header";
 import Provider from "./provider";
 
-
+//comiit
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
