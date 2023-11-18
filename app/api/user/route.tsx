@@ -3,7 +3,7 @@ import User from "@/models/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
-export async function GET(req: { url: string | URL; }) {
+export async function GET(req:any) {
   try {
     const url = new URL(req.url);
 
