@@ -8,8 +8,11 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { PiShoppingCartLight } from "react-icons/pi";
 import Link from "next/link";
 import ProfileCard from "../Profile/ProfileCard";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
+
+
   const menus = [
     { label: "Home", value: "/Home" },
     { label: "Contact", value: "/Home" },

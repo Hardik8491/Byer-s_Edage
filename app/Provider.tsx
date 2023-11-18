@@ -1,7 +1,14 @@
 "use client";
-
 import { SessionProvider } from "next-auth/react";
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <SessionProvider>{children}</SessionProvider>;
-};
+// Ensure to install @types/next-auth package for TypeScript support
+
+// Add proper types for the Provider component
+interface ProviderProps {
+  children: React.ReactNode;
+}
+
+// Update the component with TypeScript
+export default function Provider({ children}: ProviderProps) {
+  return <SessionProvider >{children}</SessionProvider>;
+}
