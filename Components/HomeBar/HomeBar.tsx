@@ -1,5 +1,6 @@
+// @ts-nocheck
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Banner from "../Banner/Banner";
 import ProductList from "../ProductList/ProductList";
 import Categories from "../ProductList/Categories/Categories";
@@ -8,42 +9,9 @@ import ItemBanner from "../ItemBanner/ItemBanner";
 import OurProduct from "../OverProduct/OurProduct";
 import Featured from "../Featured/Featured";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { useRouter } from "next/navigation";
 import ShallingProduct from "../Products/Best Selling Products/ShallingProduct";
-import Cart from "@/app/Cart/page";
 
 const HomeBar = () => {
-  const router = useRouter();
-  const categories = [
-    {
-      label: "Men`s Fashion",
-      value: "/",
-    },
-    {
-      label: "Electronics",
-      value: "/",
-    },
-    {
-      label: "Home & Lifestyle",
-      value: "/",
-    },
-    {
-      label: "Medicine",
-      value: "/",
-    },
-    {
-      label: "Baby`s & Toy",
-      value: "/",
-    },
-    {
-      label: "Groceries & Pets",
-      value: "/",
-    },
-    {
-      label: "Health & Beauty",
-      value: "/",
-    },
-  ];
 
 
 

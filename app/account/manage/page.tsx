@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import React, { useState } from "react";
 import { BiLogOut, BiSearch, BiUser } from "react-icons/bi";
@@ -17,28 +18,6 @@ const UserProfile = () => {
   const router = useRouter();
 
   const [sliderValue, setSliderValue] = useState(0);
-  const handleSliderChange = (event: any) => {
-    const value = event.target.value;
-    setSliderValue(value);
-  };
-  const nabs = [
-    {
-      name: "profile",
-      icons: <BiUser />,
-    },
-    {
-      name: "profile",
-      icons: <BiUser />,
-    },
-    {
-      name: "profile",
-      icons: <BiUser />,
-    },
-    {
-      name: "profile",
-      icons: <BiUser />,
-    },
-  ];
 
   const { data: session } = useSession();
   if(!session){

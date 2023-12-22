@@ -90,7 +90,7 @@ const Header = () => {
     <div className="text-black px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer">
       {/* <button onClick={handleCartToggle}>Toggle Cart</button> */}
 
-      <Cart isOpen={isCartOpen} onClose={handleCartToggle} />
+      {/* <Cart isOpen={isCartOpen} onClose={handleCartToggle} /> */}
       <div className="flex mb-3 list-none items-center lg:gap-10 justify-between ">
         <div className=" flex flex-1 gap-2 items-center text-lg sm:text-2xl font-bold whitespace-nowrap">
           <div className="sm:hidden p-1  rounded-md border-red-500 shadow-sm active:bg-red-700 bg-red-500 ">

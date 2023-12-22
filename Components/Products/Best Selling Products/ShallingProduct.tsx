@@ -1,18 +1,14 @@
+// @ts-nocheck
 "use client";
 
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { productData } from "@/Components/test/test";
 import Product from "../Product/Product";
 import useProducts from "@/actions/useProducts";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Example: You can use any icons or components you prefer.
-import { FiChevronLeft } from "react-icons/fi";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
-import { BiChevronRight } from "react-icons/bi";
 import { Product as ProductProps } from "@/type";
-import error from "next/error";
 
 const SallingProduct = () => {
   const { products, loading } = useProducts();

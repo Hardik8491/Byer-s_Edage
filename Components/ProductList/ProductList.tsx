@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Times from "../Timex/Times";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Product from "../Products/Product/Product";

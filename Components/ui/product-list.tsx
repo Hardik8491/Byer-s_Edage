@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import NoResult from "./no-result";
 import ProductCard from "./product-card";
 import Product from "../Products/Product/Product";

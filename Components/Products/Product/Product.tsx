@@ -1,15 +1,11 @@
+// @ts-nocheck
 "use client";
-
 import StarRatting from "@/Components/Stars/StarRatting";
-import getProduct from "@/actions/useProducts";
 import { useRouter } from "next/navigation";
-import { CiStar } from "react-icons/ci";
 
-import { disconnect } from "process";
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
-import { BiShow, BiSolidStar } from "react-icons/bi";
-import { FiStar } from "react-icons/fi";
+import { BiShow } from "react-icons/bi";
 
 interface ProductProps {
   id?: string;

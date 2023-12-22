@@ -22,7 +22,7 @@ export interface Product {
   image: Image[];
 }
 export interface Image {
-  [x: string]: string | StaticImport;
+  [x: string]: string ;
   id: string;
   name: string;
   value: string;
