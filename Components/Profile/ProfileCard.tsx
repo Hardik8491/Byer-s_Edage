@@ -6,11 +6,14 @@ import { FiStar } from "react-icons/fi";
 import { TbLogout2 } from "react-icons/tb";
 import Link from "next/link";
 import useUser from "@/hooks/useUser";
+import { signOut, useSession } from "next-auth/react";
 
 const ProfileCard = () => {
   const { user } = useUser();
  
-
+      const signout=()=>{
+        signOut();
+      }
   const ProfileMenu = [
     {
       label: "Manage Account",
@@ -35,8 +38,8 @@ const ProfileCard = () => {
     },
     {
       label: "LogOut",
-      path: "sign-out",
-      icon: (className: string) => <TbLogout2 className={className} />,
+      path: "/",
+      icon: (className: string) => <TbLogout2 className={className} onClick={signout}/>,
     },
   ];
   return (

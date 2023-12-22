@@ -2,7 +2,7 @@
 import React, { useState,useEffect } from "react";
 
 const Times = () => {
-  const futureDate = new Date('2023-12-01 00:00:00').getTime();
+  const futureDate = new Date('2024-01-01 00:00:00').getTime();
   const [time, setTime] = useState(calculateTimeRemaining(futureDate));
   function calculateTimeRemaining(targetDate: number) {
         const now = new Date().getTime();

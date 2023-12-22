@@ -13,7 +13,7 @@ const BestProduct = () => {
 
   const product = products?.map((item:ProductProps,index) => <Product key={index} {...item} />);
   return (
-    <div className="px-[135px] py-10">
+    <div className=" py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer">
       <div className="flex items-center gap-2 ">
         <div className="bg-[#DB4444] border-2 h-12 w-5 rounded-md border-[#DB4444] " />
         <p className="text-[#DB4444] font-semibold text-base">This Month</p>
@@ -28,7 +28,7 @@ const BestProduct = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 mt-2 mx-auto">
+      <div className="grid md:gap-3 lg:gap-12 xl:gap-20 grid-flow-row-dense  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5  mt-2 mx-auto">
       {products &&
           products?.length &&
           products

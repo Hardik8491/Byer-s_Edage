@@ -1,3 +1,6 @@
+// @ts-nocheck
+
+
 // import React from "react";
 // import { AiOutlineArrowUp } from "react-icons/ai";
 // import { GoArrowLeft } from "react-icons/go";
@@ -66,14 +69,16 @@
 // export default Featured;
 
 
+import Img from 'next/image'
 import React from 'react'
+
 
 const Featured = () => {
   return (
     <div>
 
    
-    <div className="w-[1170px] px-[135px] h-[768px] flex-col justify-start items-start  gap-[60px] inline-flex">
+    <div className="w-[1170px]  py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer h-[768px] flex-col justify-start items-start  gap-[60px] inline-flex">
     <div className="flex-col justify-start items-start gap-5 flex">
         <div className="justify-start items-center gap-4 inline-flex">
             <div className="w-5 h-10 relative">
@@ -118,7 +123,7 @@ const Featured = () => {
             <div className="justify-center items-center gap-[30px] inline-flex">
                 <div className="w-[270px] h-[284px] relative bg-black rounded">
                     <div className="w-[210px] h-[222px] px-2.5 pb-px left-[30px] top-[31px] absolute flex-col justify-center items-center inline-flex">
-                        <img className="w-[190px] h-[221px]" src="spiker.png" />
+                        <Img className="w-[190px] h-[221px]" src="spiker.png" />
                     </div>
                     <div className="left-[24px] top-[175px] absolute flex-col justify-start items-start gap-2 inline-flex">
                         <div className="flex-col justify-start items-start gap-2 flex">
@@ -135,7 +140,7 @@ const Featured = () => {
                 </div>
                 <div className="w-[270px] h-[284px] relative bg-black rounded">
                     <div className="h-[222px] pl-1 pr-[5px] pt-2 pb-[11px] left-[30px] top-[30px] absolute flex-col justify-center items-center inline-flex">
-                        <img className="w-[201px] h-[203px]" src="p3.png" />
+                        <Img className="w-[201px] h-[203px]" src="p3.png" />
                     </div>
                     <div className="left-[24px] top-[175px] absolute flex-col justify-start items-start gap-2 inline-flex">
                         <div className="flex-col justify-start items-start gap-2 flex">

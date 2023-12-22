@@ -1,11 +1,11 @@
 "use client";
-const { useSession } = require("next-auth/react");
-const { useRouter } = require("next/navigation");
-const { useState, useEffect } = require("react");
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const useUser = () => {
   const { data: session } = useSession();
-  console.log(session);
+
   const [user, setUser] = useState();
 
   const getUserDetails = async () => {

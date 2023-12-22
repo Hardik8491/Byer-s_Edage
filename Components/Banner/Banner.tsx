@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, {  } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./banner.module.css";
 import { Carousel } from "react-responsive-carousel";
+import Img from "next/image";
 
 const Banner = () => {
 
@@ -23,15 +23,15 @@ const Banner = () => {
   // };
 
   return (
-    <div className="mt-4  w-[80em] z-0">
-      <div className="flex overflow-hidden h-[20rem] ">
+    <div className="mt-4  w-[100em] z-0  py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer">
+      <div className="flex overflow-hidden h-[12rem] sm:h-[20rem] ">
         <Carousel
           autoPlay
           infiniteLoop
           dynamicHeight
           showThumbs={false}
           showStatus={false}
-          showArrows={false}
+          showArrows={true}
           interval={5000}
           renderIndicator={(onClickHandler, isSelected, index, label) => {
             const defStyle = {
@@ -71,47 +71,48 @@ const Banner = () => {
             );
           }} className="cursor-pointer ">
           <div>
-            <img
+            <Img
               src="/bn.png"
               loading="lazy"
               alt="image1"
-              className="h-[20rem]"
+              className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 1</p> */}
           </div>
           <div>
-            <img
+            <Img
               src="/img1.png"
               loading="lazy"
               alt="image2"
-              className="h-[20rem]"
+               priority
+              className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 2</p> */}
           </div>
           <div>
-            <img
+            <Img
               src="/img2.png"
               loading="lazy"
               alt="image3"
-              className="h-[20rem]"
+              className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 3</p> */}
           </div>
           <div>
-            <img
+            <Img
               src="/img3.png"
               loading="lazy"
               alt="image4"
-              className="h-[20rem]"
+              className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 4</p> */}
           </div>
           <div>
-            <img
+            <Img
               src="/img4.png"
               loading="lazy"
               alt="image4"
-              className="h-[20rem]"
+              className="  h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 4</p> */}
           </div>

@@ -26,8 +26,8 @@ const ItemBanner = () => {
         };
       }, [futureDate]);
   return (
-    <div className="mx-[135px] py-10 ">
-    <div className=" px-[135px] bg-black flex flex-row items-center justify-between ">
+    <div className=" py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer ">
+    <div className="  py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer bg-black flex flex-row items-center justify-between ">
       <div className="flex flex-col gap-2">
         <p>Categories</p>
         <span className="text-white text-2xl font-bold  ">

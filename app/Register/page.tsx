@@ -1,13 +1,15 @@
-import React from 'react'
-import Image from 'next/image'
 import Register from '@/Components/RegisterForm/Register'
+import Image from 'next/image'
+import React from 'react'
+
+
 
 const page = () => {
   return (
-    <div className='flex items-center py-14 '>
-        <div className='cursor-pointer w-full h-full'>
+    <div className='flex items-center py-16'>
+        <div className='cursor-pointer w-full '>
           
-            <img src="login.png" alt="" />
+            <Image src="login.png" alt=""   priority />
         </div>
         <div className='w-full'>
             <Register/>

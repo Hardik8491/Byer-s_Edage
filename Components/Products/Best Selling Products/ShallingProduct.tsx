@@ -12,10 +12,19 @@ import { FiChevronLeft } from "react-icons/fi";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import { BiChevronRight } from "react-icons/bi";
 import { Product as ProductProps } from "@/type";
+import error from "next/error";
 
 const SallingProduct = () => {
-  const { products } = useProducts();
+  const { products, loading } = useProducts();
 
+  // if (error) {
+    
+  // return( <div className="text-red-500 font-bold">
+    
+  //     Error loading products. Please try again later.
+  //   </div>
+  // )
+  // }
   const product = products?.map((item: ProductProps, index: any) => (
     <Product key={index} {...item} />
   ));
@@ -24,13 +33,14 @@ const SallingProduct = () => {
       carouselState: { currentSlide },
     } = rest;
     return (
-      <div className="carousel-button-group top-0 flex gap-2 m-2 right-0 absolute ">
+      <div className="carousel-button-group top-0 flex gap-2  right-0 lg:pr-16 xl:pr-20 absolute ">
         <button
           className="block p-4 bg-slate-100 rounded-full"
-          onClick={() => previous()}>
-          {" "}
+          onClick={() => previous()}
+        >
           <GoArrowLeft />
         </button>
+
         <button onClick={() => next()}>
           <span className="block p-4 bg-slate-100 rounded-full">
             <GoArrowRight />
@@ -40,6 +50,7 @@ const SallingProduct = () => {
     );
   };
   const responsive = {
+
     "2xl": {
       breakpoint: { max: 4000, min: 1600 },
       items: 5,
@@ -62,7 +73,7 @@ const SallingProduct = () => {
     },
     sm: {
       breakpoint: { max: 768, min: 576 },
-      items: 1,
+      items: 2,
       slidesToSlide: 2,
     },
     xs: {
@@ -73,22 +84,37 @@ const SallingProduct = () => {
   };
 
   return (
-    <div className=" relative mt-10 flex flex-col justify-center text-black  mx-[135px]   ">
-      <h1 className="text-3xl p-1  font-bold m-2  "> Shell Products</h1>
-      {/* <div className="w-full p-4"></div> */}
+    <div className="pb-4    ">
+      <div className="relative  mt-10 flex flex-col justify-center  text-black   sm:mx-[10px] md:mx-[20px] lg:mx-[60px] xl:mx-[80px] 2xl:mx-[100px]   ">
+        <div className="flex items-center gap-2 pb-4  ">
+          <div className="bg-[#DB4444] border-2 h-12 w-5 rounded-md border-[#DB4444]" />
 
-      <Carousel
-        arrows={false}
-        responsive={responsive}
-        renderButtonGroupOutside={true}
-        customButtonGroup={<ButtonGroup />}
-        className="flex mt-2"
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={5000}
-        showDots={false}>
-        {product}
-      </Carousel>
+          <p className="text-[#DB4444] font-semibold text-base pb-4">
+            Sell Products
+          </p>
+        </div>
+
+         {loading ? (
+          <h1 className="text-3xl p-1 flex  items-center justify-center font-bold m-2 w-full h-full ">
+            Loading...
+          </h1>
+        ) : (
+          <Carousel
+     
+            arrows={false}
+            responsive={responsive}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+            className="flex mt-2 items-center "
+            infinite={true}
+            // autoPlay={true}
+            autoPlaySpeed={5000}
+            showDots={false}
+          >
+            {product}
+          </Carousel>
+        )} 
+      </div>
     </div>
   );
 };

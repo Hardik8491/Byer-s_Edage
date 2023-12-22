@@ -8,7 +8,9 @@
   --foreground-rgb: rgba(255, 255, 255, 1);
   --background: #ffffff;
 }
-
+*{
+  scroll-behavior: smooth;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

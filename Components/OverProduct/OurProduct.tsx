@@ -7,7 +7,7 @@ const OurProduct = () => {
   // const itmes = new Array(8).fill(<Product product={""} />);
   const [offset, setOffset] = useState(0);
   return (
-    <div className="px-[135px] py-10 ">
+    <div className=" py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer ">
       <div className="flex items-center gap-2 ">
         <div className="bg-[#DB4444] border-2 h-12 w-5 rounded-md border-[#DB4444] " />
         <p className="text-[#DB4444] font-semibold text-base">Our Products</p>

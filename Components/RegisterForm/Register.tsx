@@ -97,7 +97,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center h-full text-black">
+    <div className="flex justify-center  text-black">
       <div className="cursor-text">
         <h1 className="text-4xl font-medium w-[400px] ">
           {isSignUp ? "Create an account" : "Log in to Buyer`s Edge"}

@@ -10,15 +10,13 @@ export async function GET(req:any) {
     const searchParams = new URLSearchParams(url.search);
 
     const email = searchParams.get("email");
-    console.log(email);
 
     await MongodbConnection();
     const data = await User.findOne({ email });
-    console.log(data)
 
     return NextResponse.json(data);
   } catch (error) {
-    console.log(error);
+  
     return new NextResponse("Intern Server Error", { status: 500 });
   }
 }

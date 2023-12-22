@@ -87,7 +87,7 @@ const CategoryProducts = () => {
       carouselState: { currentSlide },
     } = rest;
     return (
-      <div className="carousel-button-group  top-1 pt-10 flex gap-2 m-2 right-0 absolute ">
+      <div className="carousel-button-group  top-1 pt-10 flex gap-2 m-2 right-0 absolute  py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px]  sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer ">
         <button
           className="block p-4 bg-slate-100 rounded-full"
           onClick={() => previous()}>
@@ -115,28 +115,28 @@ const CategoryProducts = () => {
     },
     lg: {
       breakpoint: { max: 1200, min: 992 },
-      items: 4,
+      items: 5,
       slidesToSlide: 3,
     },
     md: {
       breakpoint: { max: 992, min: 768 },
-      items: 2,
+      items: 4,
       slidesToSlide: 3,
     },
     sm: {
       breakpoint: { max: 768, min: 576 },
-      items: 1,
+      items: 3,
       slidesToSlide: 2,
     },
     xs: {
       breakpoint: { max: 576, min: 0 },
-      items: 1,
+      items: 2,
       slidesToSlide: 1,
     },
   };
 
   return (
-    <div className=" relative mt-0 flex flex-col justify-center text-black   mx-[135px]  ">
+    <div className=" relative mt-0 flex flex-col justify-center text-black    py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer  ">
       {/* <h1 className="text-3xl p-1  font-bold m-2  "> Shell Products</h1> */}
       {/* <div className="w-full p-4"></div> */}
       <div className="flex items-center gap-2 ">
