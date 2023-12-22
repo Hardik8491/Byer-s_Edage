@@ -37,3 +37,8 @@ export interface Color {
   name: string;
   value: string;
 }
+export interface User {
+  id: string;
+  email: string;
+  username: string;
+}

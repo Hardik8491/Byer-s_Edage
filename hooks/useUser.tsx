@@ -1,4 +1,5 @@
 "use client";
+import { User } from "@/types";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -6,10 +7,10 @@ import { useState, useEffect } from "react";
 const useUser = () => {
   const { data: session } = useSession();
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState<User>();
 
   const getUserDetails = async () => {
-    const email = session?.user?.email;
+    const email = session?.user?.email  ;
     if (!email) return;
     await fetch(`/api/user?email=${email}`) // Pass email as a query parameter
       .then((response) => response.json())
