@@ -8,7 +8,7 @@ import { IoIosStar } from "react-icons/io";
 
 import { usePathname } from 'next/navigation'
 import router from "next/router";
-import QuerySearch from "../Query/QuerySearch";
+// import QuerySearch from "../Query/QuerySearch";
 
 const SearchProductList = () => {
   const { products } = useProducts();
@@ -114,7 +114,7 @@ const SearchProductList = () => {
                 <IndividualProduct key={index} {...product} />
               ))}
         </div> */}
-         <QuerySearch getSearchResults={(results: SetStateAction<never[]>) => setCoins(results)} coins={coins} />
+         {/* <QuerySearch getSearchResults={(results: SetStateAction<never[]>) => setCoins(results)} coins={coins} /> */}
       </div>
     </div>
   );
