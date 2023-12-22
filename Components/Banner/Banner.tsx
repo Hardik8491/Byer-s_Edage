@@ -23,7 +23,7 @@ const Banner = () => {
   // };
 
   return (
-    <div className="mt-4  w-[100em] z-0  py-10  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] sm:mb-1 font-normal mb-2 text-lg cursor-pointer">
+    <div className="mt-4  w-[80em] z-0       font-normal  text-lg cursor-pointer">
       <div className="flex overflow-hidden h-[12rem] sm:h-[20rem] ">
         <Carousel
           autoPlay
@@ -71,47 +71,52 @@ const Banner = () => {
             );
           }} className="cursor-pointer ">
           <div>
-            <Img
+            <img
               src="/bn.png"
               loading="lazy"
+             
               alt="image1"
               className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 1</p> */}
           </div>
           <div>
-            <Img
+            <img
               src="/img1.png"
               loading="lazy"
               alt="image2"
-               priority
+             
               className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 2</p> */}
           </div>
           <div>
-            <Img
+            <img
               src="/img2.png"
               loading="lazy"
+              
               alt="image3"
               className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 3</p> */}
           </div>
           <div>
-            <Img
+            <img
               src="/img3.png"
               loading="lazy"
+              
               alt="image4"
               className=" h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 4</p> */}
           </div>
           <div>
-            <Img
+            <img
               src="/img4.png"
               loading="lazy"
+              
               alt="image4"
+              
               className="  h-[12rem] sm:h-[20rem]"
             />
             {/* <p className="legend">Image 4</p> */}

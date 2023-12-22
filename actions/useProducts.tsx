@@ -9,11 +9,11 @@ const useProducts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://ecommarce-admin.vercel.app/api/16042d1c-ac49-4509-bd47-c1a73317a783/https://ecommarce-admin-q5jhkmv1y-hardik8491.vercel.app/api/16042d1c-ac49-4509-bd47-c1a73317a783/products/public");
-     
+        const response = await fetch("https://ecommarce-admin.vercel.app/api/16042d1c-ac49-4509-bd47-c1a73317a783/products/public");
+         
         const data = response.json();
         setProducts(await data);
-
+  
       } catch (error) {
         console.error(error);
 

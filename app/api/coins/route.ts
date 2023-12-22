@@ -12,15 +12,17 @@ async function fetchCoins() {
         },
       }
     );
-
+      
     if (!response.ok) {
       throw new Error(`Failed to fetch coins. Status: ${response.status}`);
     }
-
+     
     const coins = await response.json();
-
+    console.log(coins);
+    
     return coins;
   } catch (error) {
+    console.log("error")
     console.error("Error fetching coins:", error);
     throw error; // Re-throw the error to let the calling code handle it
   }
