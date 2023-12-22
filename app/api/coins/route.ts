@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 async function fetchCoins() {
   try {
     const response = await fetch(
-      "https://ecommarce-admin-q5jhkmv1y-hardik8491.vercel.app/api/16042d1c-ac49-4509-bd47-c1a73317a783/products/public",
+      "https://ecommarce-admin.vercel.app/api/16042d1c-ac49-4509-bd47-c1a73317a783/products/public",
       {
         method: "GET",
         headers: {
