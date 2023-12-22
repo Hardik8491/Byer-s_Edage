@@ -280,13 +280,15 @@ const Header = () => {
         <div className="w-full items-center flex justify-center">
        
             <div className=" w-full hidden lg:flex  justify-between items-center gap-2 bg-black/5 p-2 rounded  ">
-              <input
+            <Link href="/Search">
+            <input
                 type="text"
                 placeholder="What are you looking for?"
                 name=""
                 id=""
                 className="bg-gray-100 outline-none"
               />
+            </Link>
 
               <FiSearch className="opacity-70" />
             </div>
@@ -353,13 +355,15 @@ const Header = () => {
       </div>
 
       <div className=" w-full flex my-2 lg:hidden   justify-between items-center gap-2 bg-black/5 p-2 rounded  ">
-              <input
+            <Link href="/Search">
+            <input
                 type="text"
                 placeholder="What are you looking for?"
                 name=""
                 id=""
                 className="bg-gray-100 outline-none"
               />
+            </Link>
 
               <FiSearch className="opacity-70" />
             </div>

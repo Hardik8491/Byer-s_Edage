@@ -105,7 +105,7 @@ const SearchProductList = () => {
          {/* path of items */}
         </div>
         {/* product list */}
-        {/* <div className="grid grid-flow-row-dense h-full overflow-scroll   grid-cols-1  mt-2 mx-auto">
+        <div className="grid grid-flow-row-dense h-full overflow-scroll   grid-cols-1  mt-2 mx-auto">
           {products &&
             products?.length &&
             products
@@ -113,7 +113,7 @@ const SearchProductList = () => {
               .map((product: ProductProps, index) => (
                 <IndividualProduct key={index} {...product} />
               ))}
-        </div> */}
+        </div>
          {/* <QuerySearch getSearchResults={(results: SetStateAction<never[]>) => setCoins(results)} coins={coins} /> */}
       </div>
     </div>
