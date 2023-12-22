@@ -270,15 +270,30 @@ const Header = () => {
   const router = useRouter();
   return (
     <div className="text-black mb-4  px-[10px] sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px] pt-4 sm:pt-[20px] w-full  font-normal  text-base cursor-pointer">
-      <div className="flex w-full items-center  gap-1 list-none justify-between">
+      <div className="flex w-full items-center  gap-10  list-none justify-between ">
         <div
-          className="text-2xl  font-extrabold whitespace-nowrap items-center "
+          className="text-2xl   font-bold whitespace-nowrap items-center "
           onClick={() => router.push("/")}
         >
           Buyer`s Edge
         </div>
+        <div className="w-full items-center flex justify-center">
+       
+            <div className=" w-full hidden lg:flex  justify-between items-center gap-2 bg-black/5 p-2 rounded  ">
+              <input
+                type="text"
+                placeholder="What are you looking for?"
+                name=""
+                id=""
+                className="bg-gray-100 outline-none"
+              />
 
-        <div className="flex items-center justify-between gap-6  lg:gap-4 xl:gap-12 font-medium text-lg">
+              <FiSearch className="opacity-70" />
+            </div>
+       
+        </div>
+
+        {/* <div className=" font-medium text-lg flex lg:text-base  items-center justify-between gap-4 lg:gap-4 xl:gap-10">
           {menus.map((menu, index) => (
             <Link
               href={menu.value}
@@ -292,21 +307,9 @@ const Header = () => {
               {menu.label}
             </Link>
           ))}
-        </div>
-        <div className="flex items-center justify-between gap-4 lg:gap-4 xl:gap-10">
-          <li className="">
-            <div className="  hidden lg:flex  justify-around items-center gap-2 bg-gray-100 p-2  ">
-              <input
-                type="text"
-                placeholder="What are you looking for?"
-                name=""
-                id=""
-                className="bg-gray-100 outline-none"
-              />
-
-              <FiSearch className="opacity-70" />
-            </div>
-          </li>
+        </div> */}
+        <div className="flex  items-center justify-between  gap-1 sm:gap-2  md:gap-4 lg:gap-6 xl:gap-10">
+         
           <li>
             <AiOutlineHeart className="w-7 h-7" />
           </li>
@@ -349,39 +352,17 @@ const Header = () => {
         </div>
       </div>
 
-      <div className=" my-2 flex w-full  lg:hidden px-1 py-1 bg-black/5 text-black justify-between items-center rounded-md border shadow ">
-        {/* Search Input */}
-
-        <input
-          type="text"
-          placeholder="Search for Products"
-          name="search"
-          id="search"
-          className="flex-grow bg-transparent p-1 py-2 text-sm outline-none"
-        />
-
-        {/* Category Select and Search Button */}
-
-        <div className="flex gap-4 text-sm  items-center">
-          {/* Category Select */}
-          {/* 
-            <div className="bg-transparent">
-              <CategorySelect
-                categories={allCategories}
-                onSelect={handleCategorySelect}
+      <div className=" w-full flex my-2 lg:hidden   justify-between items-center gap-2 bg-black/5 p-2 rounded  ">
+              <input
+                type="text"
+                placeholder="What are you looking for?"
+                name=""
+                id=""
+                className="bg-gray-100 outline-none"
               />
-            </div> */}
 
-          {/* Search Button */}
-
-          <button
-            type="button"
-            className=" p-[10px]  rounded-md border-red-500 shadow-sm active:bg-red-800 bg-red-500"
-          >
-            <FiSearch className="text-white" />
-          </button>
-        </div>
-      </div>
+              <FiSearch className="opacity-70" />
+            </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const HomeBar = () => {
           <Banner />
         </div> */}
       {/* </div> */}
-      <div className="flex items-center  sm:px-[10px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px]  font-normal  text-lg cursor-pointe  flex-row  text-black px-[100px] w-full h-fit">
+      <div className="flex items-center px-[4px] sm:px-[6px] md:px-[20px] lg:px-[60px] xl:px-[80px] 2xl:px-[100px]  font-normal  text-lg cursor-pointe  flex-row  text-black  w-full h-fit">
         <Banner />
       </div>
       <ShallingProduct />
